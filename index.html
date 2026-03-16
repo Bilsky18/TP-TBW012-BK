@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- DOCTYPE : dit au navigateur "c'est du HTML5". Toujours en 1ère ligne. -->
+<html lang="fr">
+<!-- lang="fr" : précise la langue pour le SEO et l'accessibilité -->
+
+<head>
+    <!-- HEAD : infos invisibles pour l'utilisateur, mais importantes pour le navigateur -->
+    <meta charset="UTF-8">
+    <!-- charset UTF-8 : permet d'afficher é, è, ç, à... sans problème -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport : rend la page lisible sur mobile -->
+
+    <meta name="description" content="Portfolio de Bilal KONATE - Technicien Systèmes et Réseaux.">
+    <!-- description : texte affiché dans les résultats Google -->
+
+    <title>Accueil - Bilal KONATE</title>
+    <!-- title : texte dans l'onglet du navigateur -->
+</head>
+
+<body>
+    <!-- BODY : tout ce que l'utilisateur voit -->
+
+    <header>
+        <!-- header : zone d'en-tête, contient le titre principal du site -->
+        <h1>Bilal KONATE</h1>
+        <!-- h1 : titre de niveau 1, UN SEUL par page, c'est le titre le plus important -->
+        <p>Technicien Systèmes et Réseaux</p>
+    </header>
+
+    <nav>
+        <!--
+            nav : balise réservée aux menus de navigation
+            On utilise une liste ul > li > a : c'est la bonne pratique HTML pour les menus
+            ul = unordered list (liste à puces)
+            li = list item (un élément)
+            a href="..." = lien vers une autre page
+        -->
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="price.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- main : contenu principal et UNIQUE de la page. Un seul <main> par page. -->
+
+        <section>
+            <!--
+                section : regroupe un contenu thématique.
+                Toujours accompagné d'un titre (h2, h3...).
+            -->
+            <h2>Bienvenue sur mon portfolio</h2>
+            <!-- h2 : titre de niveau 2, sous le h1 -->
+            <p>
+                Bonjour ! Je m'appelle <strong>Bilal KONATE</strong>, j'ai 19 ans
+                <!-- strong : met en gras ET donne de l'importance sémantique au texte -->
+                et je suis étudiant en BTS Techniques de Systèmes et Réseaux à l'IPI Paris.
+            </p>
+        </section>
+
+        <section>
+            <h2>Qui suis-je ?</h2>
+            <p>
+                Je maîtrise les bases du <strong>HTML</strong>, du <strong>CSS</strong>
+                et je débute en <strong>JavaScript</strong>.
+            </p>
+            <p>
+                Retrouvez mon parcours sur la page <a href="cv.html">CV</a>,
+                mes réalisations sur <a href="portfolio.html">Portfolio</a>,
+                ou écrivez-moi via le <a href="contact.html">formulaire de contact</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- footer : pied de page, contient copyright, liens légaux... -->
+        <p>© 2026 Bilal KONATE</p>
+    </footer>
+
+</body>
+</html>

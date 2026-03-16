@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grille de tarifs des services de Bilal KONATE.">
+    <title>Tarifs - Bilal KONATE</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bilal KONATE</h1>
+        <p>Technicien Systèmes et Réseaux</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="price.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </nav>
+
+    <main>
+       <section>
+    <h2>Grille de tarifs</h2>
+    <p>
+        Vous recherchez un technicien fiable pour vos installations ou dépannages
+        informatiques ? Je propose des prestations adaptées aux particuliers et
+        aux petites entreprises, avec des tarifs clairs et sans mauvaise surprise (prennez en compte 250e pour le déplacement et 235e hors taxe pour l'expertise!).
+    </p>
+    <p>
+        Chaque intervention est précédée d'un <strong>diagnostic gratuit</strong>
+        pour évaluer vos besoins. Un devis détaillé vous est ensuite transmis
+        avant tout travail.
+    </p>
+</section>
+
+        <!-- TABLEAU DÉPANNAGE -->
+        <section>
+            <h2>Dépannage informatique</h2>
+
+            <!--
+                STRUCTURE D'UN TABLEAU HTML :
+                <table>        → conteneur du tableau
+                  <thead>      → en-tête du tableau (les titres des colonnes)
+                    <tr>       → table row = une ligne
+                      <th>     → table header = une cellule d'en-tête (en gras par défaut)
+                  <tbody>      → corps du tableau (les données)
+                    <tr>       → une ligne de données
+                      <td>     → table data = une cellule normale
+                  <tfoot>      → pied du tableau (optionnel, résumé/total)
+            -->
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Prestation</th>
+                        <th>Durée estimée</th>
+                        <th>Tarif</th>
+                        <th>Déplacement inclus</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Diagnostic informatique</td>
+                        <td>30 min</td>
+                        <td>35 €</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td>Suppression de virus / malware</td>
+                        <td>1h - 2h</td>
+                        <td>50 €</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td>Réinstallation Windows</td>
+                        <td>2h - 3h</td>
+                        <td>70 €</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td>Remplacement de pièce (RAM, SSD...)</td>
+                        <td>1h</td>
+                        <td>40 € + pièce</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td>Récupération de données</td>
+                        <td>2h - 4h</td>
+                        <td>80 €</td>
+                        <td>Non</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <!--
+                                colspan="4" : fusionne 4 cellules sur la même ligne
+                                Utile pour les notes de bas de tableau
+                            -->
+                            * Tarif horaire hors forfait : <strong>35 € / heure</strong>
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+
+        <!-- TABLEAU RÉSEAU -->
+        <section>
+            <h2>Installation réseau</h2>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Prestation</th>
+                        <th>Durée estimée</th>
+                        <th>Tarif</th>
+                        <th>Déplacement inclus</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Configuration d'un routeur / box</td>
+                        <td>1h</td>
+                        <td>45 €</td>
+                        <td>Oui</td>
+                    </tr>
+                    <tr>
+                        <td>Installation Wi-Fi et point d'accès</td>
+                        <td>1h - 2h</td>
+                        <td>60 €</td>
+                        <td>Oui</td>
+                    </tr>
+                    <tr>
+                        <td>Mise en place d'un réseau local (LAN)</td>
+                        <td>3h - 5h</td>
+                        <td>150 €</td>
+                        <td>Oui</td>
+                    </tr>
+                    <tr>
+                        <td>Configuration VPN</td>
+                        <td>2h</td>
+                        <td>80 €</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td>Audit sécurité réseau</td>
+                        <td>3h</td>
+                        <td>120 €</td>
+                        <td>Oui</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            * Les frais de déplacement au-delà de 20 km sont facturés 0,50 € / km
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+
+        <!-- TABLEAU FORFAITS MAINTENANCE -->
+        <section>
+            <h2>Forfaits maintenance mensuelle</h2>
+            <p>Pour les entreprises souhaitant un suivi régulier de leur parc informatique.</p>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Forfait</th>
+                        <th>Nombre de postes</th>
+                        <th>Interventions incluses</th>
+                        <th>Prix / mois</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Jusqu'à 5 postes</td>
+                        <td>2 interventions / mois</td>
+                        <td>99 € / mois</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Jusqu'à 15 postes</td>
+                        <td>5 interventions / mois</td>
+                        <td>199 € / mois</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entreprise</strong></td>
+                        <td>Plus de 15 postes</td>
+                        <td>Illimitées</td>
+                        <td>Sur devis</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            * Engagement minimum 3 mois. Résiliation possible avec 1 mois de préavis.
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Bilal KONATE</p>
+    </footer>
+
+</body>
+</html>
