@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utilisateurs - Admin Dashboard">
+    <title>Utilisateurs - Admin Dashboard</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .table-container {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            overflow-x: auto;
+        }
+
+        .users-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .users-table th {
+            background: rgba(0, 123, 255, 0.12);
+            color: #0a2869;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        body.dark-mode .users-table th {
+            color: #66b3ff;
+        }
+
+        .users-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .users-table tr:nth-child(even) {
+            background: var(--shadow-color);
+        }
+
+        .users-table tr:hover {
+            background: rgba(0, 123, 255, 0.12);
+        }
+
+        .user-avatar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .avatar-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .role-admin {
+            background: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+        }
+
+        .role-user {
+            background: rgba(0, 123, 255, 0.2);
+            color: #007bff;
+        }
+
+        .status-active {
+            background: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+        }
+
+        .status-inactive {
+            background: rgba(108, 117, 125, 0.2);
+            color: #6c757d;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .action-btn:hover {
+            color: #0056b3;
+        }
+
+        .action-btn.delete {
+            color: #dc3545;
+        }
+
+        .action-btn.delete:hover {
+            color: #bd2130;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">📊 Dashboard</div>
+            <nav class="sidebar-nav">
+                <a href="bootstrap.html">📈 Aperçu</a>
+                <a href="rapports.html">📑 Rapports</a>
+                <a href="parametres.html">⚙️ Paramètres</a>
+                <a href="utilisateurs.html" class="active">👥 Utilisateurs</a>
+                <a href="facturation.html">💰 Facturation</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>›</span>
+                <a href="bootstrap.html">Dashboard</a>
+                <span>›</span>
+                <span>Utilisateurs</span>
+            </nav>
+
+            <h2>Gestion des Utilisateurs</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Consultez et gérez tous les utilisateurs du système</p>
+
+            <!-- TABLE UTILISATEURS -->
+            <div class="table-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Utilisateur</th>
+                            <th>Email</th>
+                            <th>Rôle</th>
+                            <th>Statut</th>
+                            <th>Dernière Connexion</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-avatar">
+                                    <div class="avatar-circle">BK</div>
+                                    <span>Bilal KONATE</span>
+                                </div>
+                            </td>
+                            <td>bilal.konate@email.com</td>
+                            <td><span class="role-badge role-admin">Admin</span></td>
+                            <td><span class="role-badge status-active">✓ Actif</span></td>
+                            <td>Aujourd'hui 14:30</td>
+                            <td>
+                                <button class="action-btn">Éditer</button>
+                                <button class="action-btn delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(45deg, #28a745, #1e7e34);">SJ</div>
+                                    <span>Sophie Jamet</span>
+                                </div>
+                            </td>
+                            <td>sophie.jamet@email.com</td>
+                            <td><span class="role-badge role-user">Utilisateur</span></td>
+                            <td><span class="role-badge status-active">✓ Actif</span></td>
+                            <td>Hier 09:15</td>
+                            <td>
+                                <button class="action-btn">Éditer</button>
+                                <button class="action-btn delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(45deg, #fd7e14, #e96b00);">MG</div>
+                                    <span>Marc Guitard</span>
+                                </div>
+                            </td>
+                            <td>marc.guitard@email.com</td>
+                            <td><span class="role-badge role-user">Utilisateur</span></td>
+                            <td><span class="role-badge status-active">✓ Actif</span></td>
+                            <td>Il y a 3 jours</td>
+                            <td>
+                                <button class="action-btn">Éditer</button>
+                                <button class="action-btn delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(45deg, #dc3545, #bd2130);">LM</div>
+                                    <span>Louane Martin</span>
+                                </div>
+                            </td>
+                            <td>louane.martin@email.com</td>
+                            <td><span class="role-badge role-user">Utilisateur</span></td>
+                            <td><span class="role-badge status-inactive">✕ Inactif</span></td>
+                            <td>Il y a 15 jours</td>
+                            <td>
+                                <button class="action-btn">Éditer</button>
+                                <button class="action-btn delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(45deg, #6f42c1, #5a32a3);">CL</div>
+                                    <span>Clara Leblanc</span>
+                                </div>
+                            </td>
+                            <td>clara.leblanc@email.com</td>
+                            <td><span class="role-badge role-user">Utilisateur</span></td>
+                            <td><span class="role-badge status-active">✓ Actif</span></td>
+                            <td>Il y a 2 heures</td>
+                            <td>
+                                <button class="action-btn">Éditer</button>
+                                <button class="action-btn delete">Supprimer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

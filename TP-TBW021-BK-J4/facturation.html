@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Facturation - Admin Dashboard">
+    <title>Facturation - Admin Dashboard</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .invoice-container {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+
+        .invoices-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .invoices-table th {
+            background: rgba(0, 123, 255, 0.12);
+            color: #0a2869;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        body.dark-mode .invoices-table th {
+            color: #66b3ff;
+        }
+
+        .invoices-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .invoices-table tr:nth-child(even) {
+            background: var(--shadow-color);
+        }
+
+        .invoices-table tr:hover {
+            background: rgba(0, 123, 255, 0.12);
+        }
+
+        .invoice-amount {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .payment-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .payment-paid {
+            background: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+        }
+
+        .payment-pending {
+            background: rgba(253, 126, 20, 0.2);
+            color: #fd7e14;
+        }
+
+        .payment-overdue {
+            background: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+        }
+
+        .action-link {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 1rem;
+        }
+
+        .action-link:hover {
+            text-decoration: underline;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            text-align: center;
+        }
+
+        .summary-title {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">📊 Dashboard</div>
+            <nav class="sidebar-nav">
+                <a href="bootstrap.html">📈 Aperçu</a>
+                <a href="rapports.html">📑 Rapports</a>
+                <a href="parametres.html">⚙️ Paramètres</a>
+                <a href="utilisateurs.html">👥 Utilisateurs</a>
+                <a href="facturation.html" class="active">💰 Facturation</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>›</span>
+                <a href="bootstrap.html">Dashboard</a>
+                <span>›</span>
+                <span>Facturation</span>
+            </nav>
+
+            <h2>Gestion de la Facturation</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Consultez et gérez toutes vos factures</p>
+
+            <!-- RÉSUMÉ FINANCIER -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="summary-title">Total Facturé</div>
+                    <div class="summary-value">€45,230</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-title">Factures Payées</div>
+                    <div class="summary-value">€38,150</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-title">En Attente</div>
+                    <div class="summary-value">€7,080</div>
+                </div>
+            </div>
+
+            <!-- TABLE FACTURES -->
+            <div class="invoice-container">
+                <table class="invoices-table">
+                    <thead>
+                        <tr>
+                            <th>N° Facture</th>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Montant</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#INV-2026-001</td>
+                            <td>Tech Solutions Inc.</td>
+                            <td>15/01/2026</td>
+                            <td class="invoice-amount">€2,500</td>
+                            <td><span class="payment-badge payment-paid">✓ Payée</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#INV-2026-002</td>
+                            <td>Digital Marketing Co.</td>
+                            <td>20/02/2026</td>
+                            <td class="invoice-amount">€3,750</td>
+                            <td><span class="payment-badge payment-pending">⏳ En attente</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#INV-2026-003</td>
+                            <td>StartUp Innovate</td>
+                            <td>01/03/2026</td>
+                            <td class="invoice-amount">€1,890</td>
+                            <td><span class="payment-badge payment-paid">✓ Payée</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#INV-2026-004</td>
+                            <td>Cloud Services Ltd.</td>
+                            <td>05/03/2026</td>
+                            <td class="invoice-amount">€4,200</td>
+                            <td><span class="payment-badge payment-overdue">✕ Dépassée</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#INV-2026-005</td>
+                            <td>Enterprise Solutions</td>
+                            <td>10/03/2026</td>
+                            <td class="invoice-amount">€5,890</td>
+                            <td><span class="payment-badge payment-paid">✓ Payée</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#INV-2026-006</td>
+                            <td>Global Tech Partners</td>
+                            <td>15/03/2026</td>
+                            <td class="invoice-amount">€3,100</td>
+                            <td><span class="payment-badge payment-pending">⏳ En attente</span></td>
+                            <td>
+                                <a href="#" class="action-link">Voir</a>
+                                <a href="#" class="action-link">PDF</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

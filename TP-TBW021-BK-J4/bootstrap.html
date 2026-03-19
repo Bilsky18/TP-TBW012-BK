@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Dashboard - Bilal KONATE">
+    <title>Admin Dashboard - Bilal KONATE</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">📊 Dashboard</div>
+            <nav class="sidebar-nav">
+                <a href="bootstrap.html" class="active">📈 Aperçu</a>
+                <a href="rapports.html">📑 Rapports</a>
+                <a href="parametres.html">⚙️ Paramètres</a>
+                <a href="utilisateurs.html">👥 Utilisateurs</a>
+                <a href="facturation.html">💰 Facturation</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>›</span>
+                <a href="#">Dashboard</a>
+                <span>›</span>
+                <span>Aperçu</span>
+            </nav>
+
+            <h2>Bienvenue au Dashboard</h2>
+
+            <!-- STATS CARDS -->
+            <div class="stats-container">
+                <div class="stat-card red">
+                    <div class="stat-label">Ventes Totales</div>
+                    <div class="stat-value">+5,240</div>
+                    <div class="stat-change">↑ 12% par rapport à la semaine passée</div>
+                </div>
+
+                <div class="stat-card green">
+                    <div class="stat-label">Utilisateurs Actifs</div>
+                    <div class="stat-value">1,893</div>
+                    <div class="stat-change">↑ 8% par rapport à hier</div>
+                </div>
+
+                <div class="stat-card blue">
+                    <div class="stat-label">Revenus</div>
+                    <div class="stat-value">€12,530</div>
+                    <div class="stat-change">↑ 25% par rapport au mois passé</div>
+                </div>
+            </div>
+
+            <!-- PROGRESS SECTION & CONTENT -->
+            <div class="progress-content-wrapper">
+                <div class="progress-section">
+                    <h3>Progression des Tâches</h3>
+
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Développement Frontend</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill blue" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Tests et QA</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill orange" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Déploiement</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill red" style="width: 45%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Documentation</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill green" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>À propos</h3>
+                    <p>
+                        Bienvenue sur votre tableau de bord administratif ! Ici, vous pouvez suivre
+                        les performances en temps réel, gérer les utilisateurs et consulter les rapports détaillés.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Notre système vous offre une vue d'ensemble complète de vos opérations
+                        avec des indicateurs clés de performance mis à jour automatiquement.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Les barres de progression ci-dessus s'animent automatiquement pour vous montrer
+                        l'état d'avancement de vos projets.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

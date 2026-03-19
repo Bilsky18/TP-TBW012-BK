@@ -1,0 +1,367 @@
+/* ===== ADMIN DASHBOARD STYLES ===== */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    color: #fff;
+    z-index: 99;
+}
+
+.sidebar-logo {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+    padding-bottom: 1.5rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav a {
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+    border-left-color: #007bff;
+    padding-left: 2rem;
+}
+
+.sidebar-nav a.active {
+    background-color: rgba(0, 123, 255, 0.3);
+    border-left-color: #007bff;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    width: calc(100% - 280px);
+}
+
+/* ===== BREADCRUMB ===== */
+
+.breadcrumb {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--text-secondary);
+}
+
+.breadcrumb span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ===== STATS CARDS ===== */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border-left: 4px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.stat-card.red {
+    border-left-color: #dc3545;
+}
+
+.stat-card.green {
+    border-left-color: #28a745;
+}
+
+.stat-card.blue {
+    border-left-color: #007bff;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-change {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ===== PROGRESS & CONTENT SECTION ===== */
+
+.progress-content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.progress-section {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.progress-section h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.progress-item {
+    margin-bottom: 1.5rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.progress-label span:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.progress-label span:last-child {
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    animation: progressAnimation 2s ease-in-out infinite;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.progress-fill.red {
+    background: linear-gradient(90deg, #dc3545, #bd2130);
+}
+
+.progress-fill.green {
+    background: linear-gradient(90deg, #28a745, #1e7e34);
+}
+
+.progress-fill.blue {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.progress-fill.orange {
+    background: linear-gradient(90deg, #fd7e14, #e96b00);
+}
+
+@keyframes progressAnimation {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ===== CONTENT BLOCK ===== */
+
+.content-block {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.content-block h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.content-block p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE DASHBOARD ===== */
+
+@media (max-width: 1024px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 1rem 0;
+        z-index: 98;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-nav a {
+        flex: 1 1 auto;
+        padding: 0.75rem 1rem;
+        min-width: 150px;
+        text-align: center;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .sidebar-nav a:hover {
+        border-bottom-color: #007bff;
+        border-left: none;
+        padding-left: 1rem;
+    }
+
+    .sidebar-nav a.active {
+        border-left: none;
+        border-bottom-color: #007bff;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+
+    .progress-section,
+    .content-block {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-logo {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-nav a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+        min-width: 120px;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .stats-container {
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .progress-section,
+    .content-block {
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .progress-content-wrapper {
+        gap: 1rem;
+    }
+}

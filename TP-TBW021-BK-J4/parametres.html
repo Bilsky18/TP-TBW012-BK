@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paramètres - Admin Dashboard">
+    <title>Paramètres - Admin Dashboard</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .settings-container {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            margin-bottom: 2rem;
+        }
+
+        .setting-group {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .setting-group:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .setting-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .setting-label h3 {
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .setting-label h3::after {
+            display: none;
+        }
+
+        .setting-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background: var(--border-color);
+            border-radius: 13px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-switch.active {
+            background: #28a745;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s ease;
+        }
+
+        .toggle-switch.active::after {
+            left: 26px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 0.6rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .btn-save {
+            background: linear-gradient(45deg, #28a745, #1e7e34);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">📊 Dashboard</div>
+            <nav class="sidebar-nav">
+                <a href="bootstrap.html">📈 Aperçu</a>
+                <a href="rapports.html">📑 Rapports</a>
+                <a href="parametres.html" class="active">⚙️ Paramètres</a>
+                <a href="utilisateurs.html">👥 Utilisateurs</a>
+                <a href="facturation.html">💰 Facturation</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>›</span>
+                <a href="bootstrap.html">Dashboard</a>
+                <span>›</span>
+                <span>Paramètres</span>
+            </nav>
+
+            <h2>Paramètres</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Configurez les paramètres de votre système</p>
+
+            <!-- PARAMÈTRES -->
+            <div class="settings-container">
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Email de Notification</h3>
+                    </div>
+                    <p class="setting-description">Recevez les notifications importantes par email</p>
+                    <div class="input-group">
+                        <input type="email" placeholder="votreemail@example.com" value="admin@portfolio.com">
+                        <button class="btn-save">Enregistrer</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Notifications en Temps Réel</h3>
+                        <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                    </div>
+                    <p class="setting-description">Activez les notifications push du navigateur</p>
+                </div>
+
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Mode Sombre par Défaut</h3>
+                        <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+                    </div>
+                    <p class="setting-description">Basculer automatiquement en mode sombre le soir</p>
+                </div>
+
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Langue</h3>
+                    </div>
+                    <p class="setting-description">Sélectionnez la langue de l'interface</p>
+                    <div class="input-group">
+                        <select>
+                            <option selected>Français</option>
+                            <option>English</option>
+                            <option>Español</option>
+                            <option>Deutsch</option>
+                        </select>
+                        <button class="btn-save">Enregistrer</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Fréquence des Rapports</h3>
+                    </div>
+                    <p class="setting-description">Choisissez combien souvent vous voulez générer les rapports</p>
+                    <div class="input-group">
+                        <select>
+                            <option>Quotidien</option>
+                            <option selected>Hebdomadaire</option>
+                            <option>Mensuel</option>
+                        </select>
+                        <button class="btn-save">Enregistrer</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div class="setting-label">
+                        <h3>Réinitialiser les Paramètres</h3>
+                    </div>
+                    <p class="setting-description">Restaurer tous les paramètres à leurs valeurs par défaut</p>
+                    <button style="background: linear-gradient(45deg, #dc3545, #bd2130); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 25px; cursor: pointer; font-weight: 500;">
+                        Réinitialiser
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

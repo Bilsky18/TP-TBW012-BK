@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Bilal KONATE - Formation et expériences.">
+    <title>CV - Bilal KONATE</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <h1>Bilal KONATE</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="price.html">Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" title="Passer en mode sombre">🌙</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- SECTION FORMATION -->
+        <section>
+            <h2>Formation</h2>
+            <p class="subtitle">Technicien Systèmes et Réseaux</p>
+            <!--
+                article : contenu autonome et réutilisable.
+                Ici chaque diplôme est un article dans la section Formation.
+                Hiérarchie des titres : h1 (unique) > h2 > h3
+            -->
+            <article>
+                <h3>BTS TSTN - Technicien Systèmes et Réseaux</h3>
+                <p><strong>IPI Paris, Paris</strong> — 2024 / 2026</p>
+                <p>
+                    Formation en 2 ans spécialisée dans les systèmes et réseaux informatiques.
+                </p>
+            </article>
+
+            <article>
+                <h3>Baccalauréat général</h3>
+                <p><strong>Lycée Jean Vilar, Meaux</strong> — 2021 / 2024</p>
+                <p>Bac général mathématique et anglais.</p>
+            </article>
+        </section>
+
+        <!-- SECTION EXPÉRIENCES -->
+        <section>
+            <h2>Expériences professionnelles</h2>
+
+            <article>
+                <h3 class="subtitle">Alternance - Technicien Systèmes et Réseaux</h3>
+                <p><strong>Société Google, Mountain View </strong> — Juin 2025 (1 an)</p>
+                <p>Missions réalisées :</p>
+                <!--
+                    ul = liste NON ordonnée (puces) → quand l'ordre n'a pas d'importance
+                    ol = liste ORDONNÉE (1. 2. 3.) → pour des étapes ou un classement
+                    li = chaque élément de la liste
+                -->
+                <ul>
+                    <li>Aide au support utilisateurs</li>
+                    <li>Correction de bugs JavaScript</li>
+                    <li>Rédaction de documentation technique</li>
+                    <li>Participation aux réunions Agile</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3 class="subtitle">Job étudiant - Vendeur</h3>
+                <p><strong>Fnac, Paris</strong> — Été 2025 (2 mois)</p>
+                <ul>
+                    <li>Accueil et orientation des clients</li>
+                    <li>Mise en rayon et gestion des stocks</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION COMPÉTENCES -->
+        <section>
+            <h2>Compétences</h2>
+            <h3 class="subtitle">Langages et outils</h3>
+            <ul>
+                <li><strong>HTML5</strong> — Balises sémantiques</li>
+                <li><strong>CSS3</strong> — Flexbox, Grid</li>
+                <li><strong>JavaScript</strong> — DOM, événements</li>
+                <li><strong>PHP</strong> — CRUD, sessions</li>
+                <li><strong>Git & GitHub</strong> — Versionnage</li>
+                <li><strong>VS Code</strong> — Éditeur principal</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Bilal KONATE</p>
+            <div class="footer-icons">
+                <a href="https://wikipedia.org" target="_blank" title="Wikipedia">🌐</a>
+                <a href="https://ipi-paris.fr" target="_blank" title="IPI Paris">🏫</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+/* ===== RESET CSS - Nettoyage global ===== */
+
+/* Suppression des marges et padding par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset des listes */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset des liens */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Reset des images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reset de la police */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Reset des titres */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* Reset des boutons */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Reset des inputs */
+input, textarea, select {
+    font-family: inherit;
+}
+
+/* Reset des formulaires */
+fieldset {
+    border: none;
+}
+
+/* Supprimer les bordures des tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

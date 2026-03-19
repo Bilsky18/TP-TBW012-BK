@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- DOCTYPE : dit au navigateur "c'est du HTML5". Toujours en 1ère ligne. -->
+<html lang="fr">
+<!-- lang="fr" : précise la langue pour le SEO et l'accessibilité -->
+
+<head>
+    <!-- HEAD : infos invisibles pour l'utilisateur, mais importantes pour le navigateur -->
+    <meta charset="UTF-8">
+    <!-- charset UTF-8 : permet d'afficher é, è, ç, à... sans problème -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport : rend la page lisible sur mobile -->
+
+    <meta name="description" content="Portfolio de Bilal KONATE - Technicien Systèmes et Réseaux.">
+    <!-- description : texte affiché dans les résultats Google -->
+
+    <title>Accueil - Bilal KONATE</title>
+    <!-- title : texte dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- BODY : tout ce que l'utilisateur voit -->
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Bilal KONATE</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="price.html">Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" title="Passer en mode sombre">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- main : contenu principal et UNIQUE de la page. Un seul <main> par page. -->
+
+        <section class="card">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>
+                Bonjour ! Je m'appelle <strong>Bilal KONATE</strong>, j'ai 19 ans
+                et je suis étudiant en BTS Techniques de Systèmes et Réseaux à l'IPI Paris.
+            </p>
+            <p style="margin-top: 1rem;">
+                Je suis passionné par l'informatique et les technologies réseau. Mon objectif est de devenir un
+                <strong>technicien spécialisé</strong> capable de résoudre les problèmes complexes d'infrastructure
+                et de fournir des solutions adaptées aux besoins des entreprises et des particuliers.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Mes compétences principales</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>🌐 Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript - Création de sites responsifs et modernes</p>
+                </div>
+                <div class="skill-item">
+                    <h3>🔧 Systèmes</h3>
+                    <p>Configuration, maintenance et dépannage d'ordinateurs et serveurs</p>
+                </div>
+                <div class="skill-item">
+                    <h3>🌍 Réseaux</h3>
+                    <p>Installation, configuration et sécurisation de réseaux informatiques</p>
+                </div>
+                <div class="skill-item">
+                    <h3>🛡️ Sécurité</h3>
+                    <p>Bonnes pratiques de sécurité informatique et protection des données</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Services et prestation</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 1rem;">
+                    <strong>✓ Dépannage informatique</strong> - Diagnostic, réparation et optimisation de vos appareils
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong>✓ Installation réseau</strong> - Configuration de routeurs, Wi-Fi et réseaux locaux
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong>✓ Support utilisateur</strong> - Assistance technique et formation aux outils informatiques
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong>✓ Développement web</strong> - Création de sites modernes et responsive
+                </li>
+                <li>
+                    <strong>✓ Forfaits maintenance</strong> - Suivi régulier pour les entreprises et PME
+                </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Pourquoi me choisir ?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="padding: 1rem; background: var(--shadow-color); border-radius: 8px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">💼 Professionnel</h3>
+                    <p>Suivi rigoureux, devis clairs et transparents, respect des délais</p>
+                </div>
+                <div style="padding: 1rem; background: var(--shadow-color); border-radius: 8px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🚀 Réactif</h3>
+                    <p>Réponse rapide à vos demandes, interventions programmées avec flexibilité</p>
+                </div>
+                <div style="padding: 1rem; background: var(--shadow-color); border-radius: 8px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">📚 Formé</h3>
+                    <p>Étudiant en BTS, formation continue et mise à jour des connaissances</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Prêt à travailler ensemble ?</h2>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Que vous ayez besoin d'aide pour un dépannage, une installation réseau ou un développement web,
+                    je suis là pour vous aider !
+                </p>
+                <a href="contact.html" class="btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    Me contacter →
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Bilal KONATE</p>
+            <div class="footer-icons">
+                <a href="https://wikipedia.org" target="_blank" title="Wikipedia">🌐</a>
+                <a href="https://www.ipi-ecoles.com" target="_blank" title="IPI Paris">🏫</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>
