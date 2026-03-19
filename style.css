@@ -1,5 +1,3 @@
-/* Style moderne avec effets UI/UX améliorés - sans display flex */
-
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +92,7 @@ main {
     margin: 0 auto;
     padding: 2rem;
     clear: both;
-    padding-bottom: 120px; /* Espace pour le footer fixe */
+    padding-bottom: 120px; 
 }
 
 .section {
